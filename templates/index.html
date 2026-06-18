@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Chatbot</title>
+</head>
+<body>
+
+    <h1>AI Chatbot</h1>
+    <form method="POST">
+    {% if  chat_exit %}
+        <p><b>Chat ended. </b> Run again to start chatting</p>
+
+    {% else %}
+        <p><b>You:</b> {{ user_message }}</p>
+        <p><b>Bot:</b> {{ bot_reply }}</p>
+        <input type="text" name="message" placeholder="Type a message..." required>
+        <button type="submit">Send</button>
+    {% endif %}
+    </form>
+</body>
+</html>
