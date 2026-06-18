@@ -2,10 +2,12 @@ from flask import Flask, render_template,jsonify,request
 import json
 from datetime import datetime
 import time
+from dotenv import load_dotenv
 from google import genai
 app = Flask(__name__)
 chat_history = []
 import os
+load_dotenv()
 API_KEY = os.getenv("GEMINI_API_KEY")
 
 try:
